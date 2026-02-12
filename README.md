@@ -1,0 +1,1 @@
+El proyecto consiste del desarrollo de un sistema de detección , sensado y seguimiento a un objeto en un espacio en un rango determinado por las características de los sensores con el fin de poder a través de un display poder mostrar información acerca de lo que previamente se pudo a detectar en el espacio.
