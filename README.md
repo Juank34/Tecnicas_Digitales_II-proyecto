@@ -34,6 +34,7 @@ Pulsador ENTER → Seleccionar
 
 El menú y las gráficas se renderizan en el display ILI9341, utilizando comunicación SPI.
 📋 Modos de Funcionamiento
+
 1️⃣ Modo Seguimiento (Tracking Mode)
 
 Los dos sensores ultrasónicos detectan un objeto al frente.
