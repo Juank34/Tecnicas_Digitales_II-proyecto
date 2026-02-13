@@ -1,5 +1,4 @@
 
-
 📡 STM32 Smart Tracking & Scanning Node
 Proyecto desarrollado con STM32F103C8T6 (Blue Pill)
 📌 Descripción
@@ -8,10 +7,10 @@ Menú gráfico navegable
 Seguimiento automático de objetos
 Escaneo tipo radar
 Control de brillo por ADC + DMA + PWM
-El sistema utiliza sensores ultrasónicos, servomotores, display gráfico a color y control por pulsadores, integrando múltiples periféricos del STM32.
+El sistema utiliza sensores ultrasónicos, servomotor, display gráfico a color ILI9341 y control por pulsadores, integrando múltiples periféricos del STM32.
 🧰 Hardware Utilizado
 🔵 STM32F103C8T6 (Blue Pill)
-🖥 Display gráfico TFT a color
+🖥 Display TFT color ILI9341 (240x320, SPI)
 📡 2x Sensores ultrasónicos (HC-SR04 o similar)
 ⚙️ 1x Servomotor (rotación 0°–180°)
 🔘 3x Pulsadores (UP / DOWN / ENTER)
@@ -24,6 +23,7 @@ El sistema posee un menú gráfico con 4 opciones, navegable mediante:
 Pulsador UP → Subir opción
 Pulsador DOWN → Bajar opción
 Pulsador ENTER → Seleccionar
+El menú y las gráficas se renderizan en el display ILI9341, utilizando comunicación SPI.
 📋 Modos de Funcionamiento
 1️⃣ Modo Seguimiento (Tracking Mode)
 Los dos sensores ultrasónicos detectan un objeto al frente.
@@ -37,9 +37,9 @@ Nodo inteligente de captura
 2️⃣ Modo Escaneo / Radar
 El servo realiza un barrido de 0° a 180° y regreso (180° → 0°).
 Durante el movimiento, los sensores ultrasónicos miden distancia.
-El display grafica en tiempo real si se detecta un objeto.
+El display ILI9341 grafica en tiempo real si se detecta un objeto.
 Simula un radar de barrido angular.
-📊 El resultado se muestra en el display gráfico.
+📊 El resultado se muestra gráficamente en el TFT a color.
 3️⃣ Información del Proyecto
 Muestra en pantalla:
 Nombre del proyecto
@@ -64,14 +64,14 @@ DMA
 TIM (PWM)
 Interrupciones externas
 Control de servo por PWM
-Control de display gráfico (SPI)
+Comunicación SPI para display ILI9341
 🧠 Conceptos Implementados
 Máquina de estados para menú
 Navegación por pulsadores con debounce
 Barrido angular con servo
 Adquisición de datos por DMA
 Control en tiempo real
-Representación gráfica de datos
+Representación gráfica en TFT ILI9341
 Sistema multitarea simple
 🚀 Aplicaciones
 Nodo de detección inteligente
@@ -80,7 +80,8 @@ Plataforma didáctica STM32
 Proyecto académico de electrónica embebida
 📷 Posibles Mejoras Futuras
 Filtro digital para mediciones espurias
-Interfaz más avanzada
+Interfaz gráfica más avanzada
 Comunicación UART / USB
 Registro de datos
 Algoritmo PID para seguimiento más preciso
+Optimización del renderizado en ILI9341
