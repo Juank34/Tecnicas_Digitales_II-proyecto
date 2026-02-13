@@ -47,6 +47,7 @@ Sistema de tracking
 Torreta de seguimiento
 
 Nodo inteligente de captura
+
 2️⃣ Modo Escaneo / Radar
 
 El servo realiza un barrido de 0° a 180° y regreso (180° → 0°).
